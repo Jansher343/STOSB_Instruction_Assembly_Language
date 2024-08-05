@@ -1,0 +1,16 @@
+lea di,arr
+mov cx, 10
+
+l1:
+mov ah,1
+int 21h
+
+CLD
+STOSB
+loop l1
+mov ah,4ch
+int 21h
+
+ret
+
+arr db 10 dup(?)
